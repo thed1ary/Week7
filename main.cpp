@@ -76,6 +76,7 @@ void advance(LightRef tl) {
 std::string describe(CLightRef tl) {
     // TODO: Display the current 'state', 'duration_sec', and 'pedestrianMode' as an std::string.
     // Question: Why does the 'advance' function take a reference, while 'describe' takes a const reference?
+    // -> Answer: advance() must mutate the original variable; describe() function do not have to.
 
     std::string s;
     s = to_string(tl.state) 
